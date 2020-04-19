@@ -13,6 +13,21 @@ textarea{
   padding: 10px;
 }
 
+/* input and .no-ouline is removing the broder from textarea*/
+input 
+{
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: #eee;
+}
+
+.no-outline:focus 
+{
+  outline: none;
+}
+
 .jumbotron {
   text-align: center;
   background-color: transparent;
