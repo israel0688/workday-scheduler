@@ -21,15 +21,28 @@ var color3 = document.getElementById('midColumn3')
 var color4 = document.getElementById('midColumn4')
 var color5 = document.getElementById('midColumn5')
 
+
+// code to save the local storage
 var input = document.getElementById('myData')
 var btnInsert = document.getElementById('add-to-do')
+var lsOutput = document.getElementById('lsOutput')
 
 btnInsert.onclick = function save()
 {
     var key = input.value;
 
+    JSON.parse(window.localStorage.getItem(key));
+    document.getElementById(lsOutput).innerHTML = key;
+
     console.log(key);
 };
+
+
+
+
+
+
+
 
 
 //Display todays date in header
@@ -116,7 +129,7 @@ function backgroundColor1()
     if (parseInt(hour) === nowHour1)
     color1.style.backgroundColor = "lightblue";
 
-    else if (parseInt(hour) < nowHour9)
+    else if (parseInt(hour) > nowHour1)
     color1.style.backgroundColor = "green";
     
     else
@@ -131,7 +144,7 @@ function backgroundColor2()
     if (parseInt(hour) === nowHour2)
     color2.style.backgroundColor = "lightblue";
 
-    else if (parseInt(hour) < nowHour2)
+    else if (parseInt(hour) > nowHour2)
     color2.style.backgroundColor = "green";
     
     else
@@ -146,7 +159,7 @@ function backgroundColor3()
     if (parseInt(hour) === nowHour3)
     color3.style.backgroundColor = "lightblue";
 
-    else if (parseInt(hour) < nowHour3)
+    else if (parseInt(hour) > nowHour3)
     color3.style.backgroundColor = "green";
     
     else
@@ -161,7 +174,7 @@ function backgroundColor4()
     if (parseInt(hour) === nowHour4)
     color4.style.backgroundColor = "lightblue";
 
-    else if (parseInt(hour) < nowHour4)
+    else if (parseInt(hour) > nowHour4)
     color4.style.backgroundColor = "green";
 
     else
@@ -177,7 +190,7 @@ function backgroundColor5()
     if (parseInt(hour) === nowHour5)
     color5.style.backgroundColor = "lightblue";
 
-    else if (parseInt(hour) < nowHour5)
+    else if (parseInt(hour) > nowHour5)
     color5.style.backgroundColor = "green";
 
     else
