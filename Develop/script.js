@@ -26,21 +26,23 @@ var color5 = document.getElementById('midColumn5')
 var input = document.getElementById('myData')
 var btnInsert = document.getElementById('add-to-do')
 var lsOutput = document.getElementById('lsOutput')
+//var output = JSON.parse(window.localStorage.getItem(input))
 
+
+//document.getElementById(output).innerHTML = lsOutput;
+
+// funcition used to save the hourly tasks
+// this is where I got stuck, I could not figure out how to
+// populate from local storage to textbox
 btnInsert.onclick = function save()
 {
     var key = input.value;
 
-    JSON.parse(window.localStorage.getItem(key));
-    document.getElementById(lsOutput).innerHTML = key;
+
+
 
     console.log(key);
 };
-
-
-
-
-
 
 
 
@@ -61,7 +63,7 @@ function headingDate()
 headingDate();
 
 
-//following functions are for the background colors
+//following functions are for the background colors during specific hours
 function backgroundColor9()
 {
   nowHour9= 9;
