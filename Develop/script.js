@@ -20,6 +20,18 @@ var color2 = document.getElementById('midColumn2')
 var color3 = document.getElementById('midColumn3')
 var color4 = document.getElementById('midColumn4')
 var color5 = document.getElementById('midColumn5')
+
+var input = document.getElementById('myData')
+var btnInsert = document.getElementById('add-to-do')
+
+btnInsert.onclick = function save()
+{
+    var key = input.value;
+
+    console.log(key);
+};
+
+
 //Display todays date in header
 function headingDate()
 {
